@@ -1,8 +1,4 @@
-/* export any necessary logic here to the ui using the following syntax:
-export function [BusinessObject(with any parameters)]*/
-
 // This function stores our state.
-
 export const storeState = () => {
   let currentState = {};
     return (stateChangeFunction = state => state) => {
@@ -32,4 +28,11 @@ export const blueFood = changeState("soil")(5);
 
 export const hydrate = changeState("water")(1);
 export const superWater = changeState("water")(5);
+export const heroWater = changeState("water")(7);
+
+export const light = changeState("light")(1);
+export const enlighten = changeState("light")(5);
+
+const initialState = { soil: 0, water: 0, light: 0};
+export const plant2 = storeState(initialState);
 
