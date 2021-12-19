@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import { stateControl, feed, blueFood, hydrate, superWater, heroWater, light, enlighten, plant2} from './triangle.js';
+import { stateControl, feed, blueFood, hydrate, superWater, heroWater, light, enlighten, plant2, plant3} from './triangle.js';
 $(document).ready(function() {
 //the three functions increment the properties of Monty
   $('#hydrate').click(function() { //Htmls "add H20" button clicked
@@ -18,7 +18,7 @@ $(document).ready(function() {
   // increments a value of 5 to the light property
   $('#light').click(function() {
     const newState = stateControl(enlighten);
-    $('#light-value').text(`Light: ${newState.light2}`);
+    $('#light-value').text(`Light: ${newState.light}`);
   });
 
   $('#show-state').click(function() {
@@ -27,36 +27,51 @@ $(document).ready(function() {
     $('.monty-values').toggle();
     $('#hydration-value').text(`Hydration: ${currentState.water}`);
     $('#soil-value').text(`Soil: ${currentState.soil}`);
-    $('#light-value').text(`Light: ${currentState.light2}`);
+    $('#light-value').text(`Light: ${currentState.light}`);
     
   });
 
 // the 3  below affect Darcy's properties
-  $('#2hydrate').click(function() {
+  $('#hydrate2').click(function() {
     const newState = plant2(hydrate);
-    $('#2hydration-value').text(`Hydration: ${newState.water}`);
+    $('#hydration-value2').text(`Hydration: ${newState.water}`);
   });
-  $('#2feed').click(function() {
-    const newState = stateControl(blueFood);
-    $('#2soil-value').text(`Soil: ${newState.soil2}`);
+  $('#feed2').click(function() {
+    const newState = plant2(blueFood);
+    $('#soil-value2').text(`Soil: ${newState.soil}`);
   });
-  $('#2light').click(function() {
-    const newState = stateControl(light);
-    $('#2light-value').text(`Light: ${newState.light}`);
+  $('#light2').click(function() {
+    const newState = plant2(enlighten);
+    $('#light-value2').text(`Light: ${newState.light}`);
   });
   $('#show-state2').click(function() {
     // We just need to call stateControl() without arguments to see our current state.
-    const currentState = stateControl();
+    const currentState = plant2();
     $('.darcy-values').toggle();
-    $('#2hydration-value').text(`Hydration: ${currentState.water}`);
-    $('#2soil-value').text(`Soil: ${currentState.soil2}`);
-    $('#2light-value').text(`Light: ${currentState.light}`);
+    $('#hydration-value2').text(`Hydration: ${currentState.water}`);
+    $('#soil-value2').text(`Soil: ${currentState.soil}`);
+    $('#light-value2').text(`Light: ${currentState.light}`);
   });
 
-// pat the plant's properties
-  $('#3hydrate').click(function() {
-    const newState = stateControl(superWater);
-  $('#3hydration-value').text(`Hydration: ${newState.water}`);
+// PAT THE PLANT's properties
+  $('#hydrate3').click(function() {
+    const newState = plant3(heroWater);
+  $('#hydration-value3').text(`Hydration: ${newState.water}`);
+  });
+  $('#feed3').click(function() {
+    const newState = plant3(blueFood);
+    $('#soil-value3').text(`Soil: ${newState.soil}`);
+  });
+  $('#light3').click(function() {
+    const newState = plant3(light);
+    $('#light-value3').text(`Light: ${newState.light}`);
+  });
+  $('#show-state3').click(function() {
+    const currentState = plant3();
+    $('.pat-values').toggle();
+    $('#hydration-value3').text(`Hydration: ${currentState.water}`);
+    $('#soil-value3').text(`Soil: ${currentState.soil}`);
+    $('#light-value3').text(`Light: ${currentState.light}`);
   });
 });
 

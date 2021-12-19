@@ -11,9 +11,10 @@
     <div class="container">
       <div class="wrapper">
         <div class="jumbotron">
-          <h1>Power plant face off</h1>
-          <select>
-            <option>
+          <div class="dropdown">
+            <h1><span>Power plant face off</span></h1>
+            <p>Hover title for instructions</p>
+            <div class="dropdown-content">
               In this 1V1 faceoff users take turns feeding and caring for their plants through 
               the use of their buttons. On their turn, users have the ability to choose how many times 
               they will click each button until they think their plant is superior. Then 
@@ -23,20 +24,19 @@
               If one user underfeeds it and the other user has an overall higher total of plant points, that player wins.
   
               <span id="red">*treat the game like blackjack with multiple hands*</span>
-            </option>
-          </select>
-          
+            </div>
+          </div>
         </div>
         <div class="row">
           <div class="column">
-            <div class="grow-buttons">
+            <div class="grow1">
               <h1>Monty the Monstera</h1>
               <img src="../assets/images/monstera.jpeg" alt= "Photo of a monstera plant">
               <!-- <button class="button-56" >Button 56</button> -->
-              <button class="btn-primary" id="hydrate">Add H20</button>
-              <button class="btn-warning" id="light">Beam it with light</button>
+              <button class="btn-success" id="hydrate">Add H20</button>
+              <button class="btn-success" id="light">Beam it with light</button>
               <button class="btn-success" id="feed">Add dirt</button>
-              <button class="btn-danger" id="show-state">Current Stats</button>
+              <button class="btn-warning" id="show-state">Current Stats</button>
               <div class="monty-values">
                 <h2>Your Plant's Values</h2>
                 <h3><div id="hydration-value">0</div></h3>
@@ -47,38 +47,38 @@
             </div>
           </div>
           <div class="column">
-            <div class="grow-another">
+            <div class="grow2">
               <h1>Darcy the Dracaena</h1>
               <img src="../assets/images/dracaena.jpeg">
-              <button class="btn-primary" id="2hydrate">Add H20</button>
-              <button class="btn-warning" id="2light">Beam it with light</button>
-              <button class="btn-success" id="2feed">Add dirt</button>
-              <button class="btn-danger" id="show-state2">Current Stats</button>
+              <button class="btn-success" id="hydrate2">Add H20</button>
+              <button class="btn-success" id="light2">Beam it with light</button>
+              <button class="btn-success" id="feed2">Add dirt</button>
+              <button class="btn-warning" id="show-state2">Current Stats</button>
               
               <div class="darcy-values">
                 <h2>Your Plant's Values</h2>
-                <h3><div id="2hydration-value">0</div></h3>
-                <h3><div id="2light-value">0</div></h3>
-                <h3><div id="2soil-value">0</div></h3>
+                <h3><div id="hydration-value2">0</div></h3>
+                <h3><div id="light-value2">0</div></h3>
+                <h3><div id="soil-value2">0</div></h3>
               </div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="column">
-            <div class="grow-another">
-              <h1>Pat the Plant</h1>
-              <img src="../assets/images/dracaena.jpeg">
-              <button class="btn-primary" id="3hydrate">Add H20</button>
-              <button class="btn-warning" id="3light">Beam it with light</button>
-              <button class="btn-success" id="3feed">Add dirt</button>
-              <button class="btn-danger" id="show-state3">Current Stats</button>
+            <div class="grow3">
+              <h1>Pat the Prayer Plant</h1>
+              <img src="../assets/images/prayer.jpg">
+              <button class="btn-success" id="hydrate3">Add H20</button>
+              <button class="btn-success" id="light3">Beam it with light</button>
+              <button class="btn-success" id="feed3">Add dirt</button>
+              <button class="btn-warning" id="show-state3">Current Stats</button>
               
               <div class="pat-values">
                 <h2>Your Plant's Values</h2>
-                <h3><div id="3hydration-value">0</div></h3>
-                <h3><div id="3light-value">0</div></h3>
-                <h3><div id="3soil-value">0</div></h3>
+                <h3><div id="hydration-value3">0</div></h3>
+                <h3><div id="light-value3">0</div></h3>
+                <h3><div id="soil-value3">0</div></h3>
               </div>
             </div>
           </div>  
