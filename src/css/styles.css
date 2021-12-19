@@ -5,7 +5,27 @@
   margin: 15px;
   background-color: red;
 }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown p {
+  font-style: italic;
+  color:rgba(0, 0, 0, 0.386)
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 .row {
   display: flex;
   flex-direction: row;
@@ -19,28 +39,19 @@
   flex-basis: 100%;
   flex: 1;
 }
-.grow-buttons {
+.grow1, .grow2, .grow3{
   background-color: rgb(214, 177, 102);
   color:white;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 5%;
+  padding: 1% 2% 2% 1%;
+  
 }
-.grow-buttons h1{
+.grow1, .grow2, .grow3 h1{
   text-align: center;
 }
-.grow-another {
-  background-color: rgb(214, 177, 102);
-  color: white;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 5%;
-}
-.grow-another h1 {
-  text-align: center;
-}
+
 .jumbotron {
   background-color: rgb(128, 183, 128);
   width: 100%;
@@ -58,6 +69,10 @@ img {
 }
 
 .darcy-values {
+  display: none;
+}
+
+.pat-values {
   display: none;
 }
 #red {
