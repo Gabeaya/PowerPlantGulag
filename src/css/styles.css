@@ -56,6 +56,14 @@
   background-color: rgb(128, 183, 128);
   width: 100%;
 }
+
+.add-plant {
+
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+}
+
 img {
   display: block;
   margin-left: auto;
@@ -63,7 +71,12 @@ img {
   width: 250px;
   height: 250px;
 }
-
+.grow2 {
+  display: none;
+}
+.grow3 {
+  display: none;
+}
 .monty-values {
   display: none;
 }
