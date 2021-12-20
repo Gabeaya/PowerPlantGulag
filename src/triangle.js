@@ -1,12 +1,12 @@
 // This function stores our state.
 export const storeState = () => {
   let currentState = {};
-    return (stateChangeFunction = state => state) => {
+  return (stateChangeFunction = state => state) => {
     const newState = stateChangeFunction(currentState);
     currentState = {...newState};
     return newState;
-  }
-}
+  };
+};
 
 export const stateControl = storeState();
 
@@ -17,9 +17,9 @@ export const changeState = (prop) => {
     return (state) => ({
       ...state,
       [prop] : (state[prop] || 0) + value
-    })
-  }
-}
+    });
+  };
+};
 
 // We create four functions using our function factory. We could easily create many more.
 
@@ -33,6 +33,6 @@ export const heroWater = changeState("water")(7);
 export const light = changeState("light")(1);
 export const enlighten = changeState("light")(5);
 
-const initialState = { soil: 0, water: 0, light: 0};
+export const plant1 = storeState();
 export const plant2 = storeState();
 export const plant3 = storeState();
